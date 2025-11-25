@@ -1,0 +1,9 @@
+{
+  "installCommand": "git submodule update --init --recursive && npm ci",
+  "buildCommand": "npm run build",
+  "outputDirectory": ".next",
+  "framework": null,
+  "git": {
+    "ignoredBuildStep": "if [ \"$VERCEL_GIT_COMMIT_REF\" != \"main\" ]; then echo 'Skipping non-main' && exit 0; fi"
+  }
+}
