@@ -1,6 +1,7 @@
 {
-  "installCommand": "git submodule update --init --recursive && npm ci",
-  "buildCommand": "npm run build",
+  "installCommand": "cd frontend && git submodule update --init --recursive && npm ci",
+  "buildCommand": "cd frontend && npm run build",
+  "outputDirectory": "frontend/.next",  // Assumes Next.js; change to "frontend/dist" if Vite/other
   "framework": null,
   "git": {
     "ignoredBuildStep": "if [ \"$VERCEL_GIT_COMMIT_REF\" != \"main\" ]; then echo 'Skipping non-main' && exit 0; fi"
